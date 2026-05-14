@@ -15,7 +15,7 @@
     "framer-motion": "^12.38.0",
     "jspdf": "^4.2.0",
     "lucide-react": "^0.577.0",
-    "next": "latest",
+    "next": "15.5.8",
     "pdf-lib": "^1.17.1",
     "razorpay": "^2.9.6",
     "react": "^19.0.0",
