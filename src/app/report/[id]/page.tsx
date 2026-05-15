@@ -174,13 +174,23 @@ export default function ReportPage() {
                 Download below. We&apos;ve also emailed it to you — share with your parents.
               </p>
 
-              <a href={student.report_url} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-white text-sm font-bold uppercase tracking-widest hover:bg-primary-dark transition-all shadow-xl shadow-primary/20 group">
-                <svg className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                Download PDF Report
-              </a>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href={student.report_url} target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 px-6 py-4 rounded-full bg-primary text-white text-[11px] font-bold uppercase tracking-widest hover:bg-primary-dark transition-all shadow-xl shadow-primary/20 group w-full sm:w-auto">
+                  <svg className="w-4 h-4 group-hover:translate-y-0.5 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Your AI Report
+                </a>
+                
+                <a href="https://lpzaslgjklcxeotobcdu.supabase.co/storage/v1/object/public/reports/assets/NEET26_Planner_UniPathSchool.pdf" download="NEET26_Planner_UniPathSchool.pdf" target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 px-6 py-4 rounded-full bg-slate-900 text-white text-[11px] font-bold uppercase tracking-widest hover:bg-slate-800 transition-all shadow-xl shadow-slate-900/20 group w-full sm:w-auto">
+                  <svg className="w-4 h-4 group-hover:translate-y-0.5 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  2026 Strategy Planner
+                </a>
+              </div>
 
               <div className="mt-5 pt-5 border-t border-slate-100 flex items-center justify-center gap-2 text-[11px] text-slate-400">
                 <svg className="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

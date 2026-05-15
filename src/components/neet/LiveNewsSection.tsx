@@ -25,8 +25,10 @@ export default function LiveNewsSection() {
       fetched_at: new Date().toISOString()
     }
   ]);
+  const [mounted, setMounted] = useState(false);
   
   useEffect(() => {
+    setMounted(true);
     fetch("/api/nta-updates")
       .then((r) => r.json())
       .then((data) => {
@@ -59,7 +61,7 @@ export default function LiveNewsSection() {
           <div className="flex-1 space-y-4 w-full">
             {updates.map((news, i) => {
               const date = new Date(news.fetched_at);
-              const timeString = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+              const timeString = mounted ? date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : "Just now";
               return (
                 <motion.div 
                   key={news.id || `news-${i}`}
@@ -70,7 +72,7 @@ export default function LiveNewsSection() {
                   className="p-5 bg-slate-50 border border-slate-100 hover:border-red-200 rounded-2xl transition-colors"
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Update • {timeString}</div>
+                    <div suppressHydrationWarning className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Update • {timeString}</div>
                     <a href={news.source_url} target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-400 hover:text-red-500 transition-colors">
                       Verify ↗
                     </a>

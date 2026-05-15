@@ -22,7 +22,7 @@ export async function sendReportEmail(opts: {
 
   try {
     await resend.emails.send({
-      from: "NEET by Unipathschool <onboarding@resend.dev>", // Use this until domain is verified
+      from: "NEET by Unipathschool <support@neet.unipathschool.com>",
       to: toEmail,
       subject: `Your NEET 2026 Action Plan is ready, ${toName}`,
       html: `
@@ -41,9 +41,14 @@ export async function sendReportEmail(opts: {
               <li>30-day re-exam prep plan, week by week</li>
               <li>Alternative paths if needed</li>
             </ul>
-            <a href="${reportUrl}" style="display: inline-block; background: #C2410C; color: #ffffff; font-size: 12px; font-weight: 700; text-decoration: none; padding: 14px 32px; border-radius: 50px; letter-spacing: 0.15em; text-transform: uppercase;">
-              Download Your PDF →
-            </a>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="${reportUrl}" style="display: inline-block; background: #C2410C; color: #ffffff; font-size: 12px; font-weight: 700; text-decoration: none; padding: 14px 24px; border-radius: 50px; letter-spacing: 0.15em; text-transform: uppercase;">
+                Download AI Report →
+              </a>
+              <a href="https://lpzaslgjklcxeotobcdu.supabase.co/storage/v1/object/public/reports/assets/NEET26_Planner_UniPathSchool.pdf" style="display: inline-block; background: #1E293B; color: #ffffff; font-size: 12px; font-weight: 700; text-decoration: none; padding: 14px 24px; border-radius: 50px; letter-spacing: 0.15em; text-transform: uppercase;">
+                Download 2026 Planner →
+              </a>
+            </div>
           </div>
           <p style="color: #94A3B8; font-size: 12px; text-align: center; margin: 0;">
             Questions? Reply to this email.<br/>
@@ -66,7 +71,7 @@ export async function sendAdminAlert(opts: { subject: string; message: string })
   const adminEmail = process.env.ADMIN_EMAIL || "admin@unipathschool.com";
   try {
     await resend.emails.send({
-      from: "NEET Alert <onboarding@resend.dev>",
+      from: "NEET Alert <support@neet.unipathschool.com>",
       to: adminEmail,
       subject: `[NEET Platform Alert] ${opts.subject}`,
       html: `<pre style="font-family: monospace; font-size: 13px; white-space: pre-wrap;">${opts.message}</pre>`,

@@ -134,11 +134,15 @@ export default function TestPDFPage() {
           </div>
           <a href={result.url} download={result.filename}
             style={{ padding: "10px 20px", background: "#16a34a", color: "white", borderRadius: 8, fontSize: 12, fontWeight: 700, textDecoration: "none" }}>
-            ⬇ Download PDF
+            ⬇ Download AI PDF
+          </a>
+          <a href="https://lpzaslgjklcxeotobcdu.supabase.co/storage/v1/object/public/reports/assets/NEET26_Planner_UniPathSchool.pdf" target="_blank" rel="noopener noreferrer"
+            style={{ padding: "10px 20px", background: "#C2410C", color: "white", borderRadius: 8, fontSize: 12, fontWeight: 700, textDecoration: "none" }}>
+            ⬇ Download Planner
           </a>
           <a href={result.url} target="_blank" rel="noopener noreferrer"
             style={{ padding: "10px 20px", background: "#1e40af", color: "white", borderRadius: 8, fontSize: 12, fontWeight: 700, textDecoration: "none" }}>
-            👁 Open in Browser
+            👁 Open AI PDF
           </a>
         </div>
       )}

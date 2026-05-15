@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Mail, Linkedin, Instagram } from "lucide-react";
 import NeetHeader from "@/components/neet/NeetHeader";
 import LiveNTATicker from "@/components/neet/LiveNTATicker";
 import LiveNewsSection from "@/components/neet/LiveNewsSection";
@@ -296,18 +297,41 @@ export default function LandingPage() {
 
       {/* ── FOOTER ───────────────────────────────────────────── */}
       <footer className="bg-slate-950 py-14">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-10">
           <div>
             <div className="font-heading font-semibold text-white text-lg tracking-tighter mb-1">
               NEET by <span className="text-primary">UNIPATHSCHOOL</span>
             </div>
-            <div className="text-xs text-slate-500 font-light">Crisis support for 24 lakh NEET 2026 students.</div>
+            <div className="text-xs text-slate-500 font-light mb-4">Crisis support for 24 lakh NEET 2026 students.</div>
+            <div className="text-xs text-slate-600">© 2026 Unipathschool. All rights reserved.</div>
           </div>
-          <div className="flex items-center gap-6">
-            <a href="https://nta.ac.in" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-400 hover:text-white transition-colors">NTA Official ↗</a>
-            <a href="https://unipathschool.com" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-400 hover:text-white transition-colors">unipathschool.com ↗</a>
+          
+          <div className="flex flex-col gap-4 items-end">
+            <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 min-w-[220px] shadow-lg">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">A project by</p>
+              <p className="text-white font-bold font-heading text-lg leading-tight">Shiva Rathore</p>
+              <p className="text-primary text-[10px] font-bold uppercase tracking-widest mb-4">Founder · UNI Organisation</p>
+              <div className="flex gap-2">
+                <a href="mailto:23cs3050@rgipt.ac.in" className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors" title="Email">
+                  <Mail className="w-3.5 h-3.5 text-white" />
+                </a>
+                <a href="https://www.linkedin.com/in/shiva-rathore-2027cse/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors" title="LinkedIn">
+                  <Linkedin className="w-3.5 h-3.5 text-white" />
+                </a>
+                <a href="https://www.instagram.com/shivarathoreee/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors" title="@shivarathoreee">
+                  <Instagram className="w-3.5 h-3.5 text-white" />
+                </a>
+                <a href="https://www.instagram.com/shivacreates_/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors" title="@shivacreates_">
+                  <Instagram className="w-3.5 h-3.5 text-white" />
+                </a>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-6 mt-2">
+              <a href="https://nta.ac.in" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-400 hover:text-white transition-colors">NTA Official ↗</a>
+              <a href="https://unipathschool.com" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-400 hover:text-white transition-colors">unipathschool.com ↗</a>
+            </div>
           </div>
-          <div className="text-xs text-slate-600">© 2026 Unipathschool. All rights reserved.</div>
         </div>
       </footer>
     </main>
